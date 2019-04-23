@@ -3,7 +3,7 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
-$access_token = '6HkPd+1YRPsNZBBYn81bkCufMdcORDlyiE9m1OE089VgJpH8U+C77qkyt0YlIGpkseSPnD5INk85XDlGsYGZMFDWfESpyg50MfGgk0f7BD1a+ZlPcVkAlQS0TB2Aje3AGpSJLAOZ7RjnKFowNcMC5QdB04t89/1O/w1cDnyilFU=';
+$access_token = '2xrbcTrUtlgTgJWoFAitjR/v3wiyK2yWTP++h0vDajTc7wS9o2a5BFvFcczIei28seSPnD5INk85XDlGsYGZMFDWfESpyg50MfGgk0f7BD05iJFdhRYh6fEi+mM+k42EQJVFsNVM2CJzF3sNWqhFjwdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -12,6 +12,7 @@ $events = json_decode($content, true);
 // Validate parsed JSON data
 echo "hunter";
 if (!is_null($events['events'])) {
+	echo "hunter cc";
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
