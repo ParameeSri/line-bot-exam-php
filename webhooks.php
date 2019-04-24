@@ -28,10 +28,14 @@ if (!is_null($events['events'])) {
 	
 			// $a = 'How are you?';
 
-			if (strpos($a, 'สวัสดี') !== false) {
-				$text = "มี";
+			if (strpos($userMessage, 'สวัสดี') == true) {
+				$text = "สวัสดีครับมีอะไรให้ช่วยมั๊ยครับ";
+			} else if (strpos($userMessage, 'รัก') == true) {
+				$text = "ความรักเป็นสิ่งสวยงาม";
+			} else if (strpos($userMessage, 'นอน') == true) {
+				$text = "การนอนหลับเป็นการพักผ่อนที่ดีที่สุด โดยไม่ต้องไปเที่ยวไหนเลย";
 			} else {
-				$text = "ไม่มี";
+				$text = "เบิดคำสิเว้า";
 			}
 			/* จบ */
 
