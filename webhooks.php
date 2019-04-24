@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 	
 			// $a = 'How are you?';
 
-			if (strpos($userMessage, 'สวัสดี') == true) {
+			if (strpos($userMessage, 'สวัสดี')) {
 				$text = "สวัสดีครับมีอะไรให้ช่วยมั๊ยครับ";
 			} else if (strpos($userMessage, 'รัก') == true) {
 				$text = "ความรักเป็นสิ่งสวยงาม";
