@@ -29,8 +29,7 @@ if (!is_null($events['events'])) {
 			// $a = 'How are you?';
 			// $a = 'How are you?';
 			$search = 'สวัสดี';
-
-			if(preg_match("/{'สวัสดี'}/i", $userMessage)) {
+			if(preg_match("/{$search}/i", $userMessage)) {
 				$text = "สวัสดีครับมีอะไรให้ช่วยมั๊ยครับ";
 			} else {
 				$text = "เบิดคำสิเว้า";
