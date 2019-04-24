@@ -27,16 +27,24 @@ if (!is_null($events['events'])) {
 			$userMessage = $event['message']['text']; 
 	
 			// $a = 'How are you?';
+			// $a = 'How are you?';
+			$search = 'สวัสดี';
 
-			if (strpos($userMessage, 'สวัสดี') || $userMessage == 'สวัสดี') {
+			if(preg_match("/{'สวัสดี'}/i", $userMessage)) {
 				$text = "สวัสดีครับมีอะไรให้ช่วยมั๊ยครับ";
-			} else if (strpos($userMessage, 'รัก') == true) {
-				$text = "ความรักเป็นสิ่งสวยงาม";
-			} else if (strpos($userMessage, 'นอน') == true) {
-				$text = "การนอนหลับเป็นการพักผ่อนที่ดีที่สุด โดยไม่ต้องไปเที่ยวไหนเลย";
 			} else {
-				$text = "เบิดคำสิเว้า".$userMessage;
+				$text = "เบิดคำสิเว้า";
 			}
+
+			// if (strpos($userMessage, 'สวัสดี') || $userMessage == 'สวัสดี') {
+			// 	$text = "สวัสดีครับมีอะไรให้ช่วยมั๊ยครับ";
+			// } else if (strpos($userMessage, 'รัก') == true) {
+			// 	$text = "ความรักเป็นสิ่งสวยงาม";
+			// } else if (strpos($userMessage, 'นอน') == true) {
+			// 	$text = "การนอนหลับเป็นการพักผ่อนที่ดีที่สุด โดยไม่ต้องไปเที่ยวไหนเลย";
+			// } else {
+			// 	$text = "เบิดคำสิเว้า".$userMessage;
+			// }
 			/* จบ */
 
 			// Build message to reply back
