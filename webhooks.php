@@ -29,8 +29,17 @@ if (!is_null($events['events'])) {
 			// $a = 'How are you?';
 			// $a = 'How are you?';
 			$search = 'สวัสดี';
-			if(preg_match("/{$search}/i", $userMessage)) {
+
+			if(preg_match("/สวัสดี/i", $userMessage)) {
 				$text = "สวัสดีครับมีอะไรให้ช่วยมั๊ยครับ";
+			} else if (preg_match("/รัก/i", $userMessage)) {
+				$text = "ความรักเป็นสิ่งสวยงาม";
+			} else if (preg_match("/นอน/i", $userMessage)) {
+				$text = "มักนอนคักบ่";
+			} else if (preg_match("/คัก/i", $userMessage)) {
+				$text = "เสาร์ อาทิตย์นี้กะนอนเด้อ ตื่นมาเทื่อเดียววันจันทร์";
+			} else if (preg_match("/บ้า/i", $userMessage)) {
+				$text = "เหานั่นแหละบ้า";
 			} else {
 				$text = "เบิดคำสิเว้า";
 			}
