@@ -35,7 +35,7 @@ if (!is_null($events['events'])) {
 			} else if (strpos($userMessage, 'นอน') == true) {
 				$text = "การนอนหลับเป็นการพักผ่อนที่ดีที่สุด โดยไม่ต้องไปเที่ยวไหนเลย";
 			} else {
-				$text = "เบิดคำสิเว้า";
+				$text = "เบิดคำสิเว้า".$userMessage;
 			}
 			/* จบ */
 
