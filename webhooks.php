@@ -24,11 +24,15 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			/* เริ่ม */
+			$userMessage = $event['message']['text']; 
+	
 			// $a = 'How are you?';
 
-			// if (strpos($a, 'are') !== false) {
-			// 		echo 'true';
-			// }
+			if (strpos($a, 'สวัสดี') !== false) {
+				$text = "มี";
+			} else {
+				$text = "ไม่มี";
+			}
 			/* จบ */
 
 			// Build message to reply back
