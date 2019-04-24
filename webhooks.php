@@ -12,15 +12,24 @@ $events = json_decode($content, true);
 // Validate parsed JSON data
 echo "hunter";
 if (!is_null($events['events'])) {
-	echo "hunter cc";
+
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+
 			// Get text sent
-			$text = $event['source']['userId'];
+			$text = $event;//['source']['userId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
+			
+			/* เริ่ม */
+			// $a = 'How are you?';
+
+			// if (strpos($a, 'are') !== false) {
+			// 		echo 'true';
+			// }
+			/* จบ */
 
 			// Build message to reply back
 			$messages = [
