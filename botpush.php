@@ -8,8 +8,8 @@ $access_token = '2xrbcTrUtlgTgJWoFAitjR/v3wiyK2yWTP++h0vDajTc7wS9o2a5BFvFcczIei2
 
 $channelSecret = '75c03f392f6e53d662d6f5a8db9e421f';
 
-// $pushID = 'Ue12fab23d245e4c56d678be6e55a33f1'; // เอ๋
-$pushID = 'U826ec160cae46b8fc9f06fe676c2510f'; // หวาน
+$pushID = 'Ue12fab23d245e4c56d678be6e55a33f1'; // เอ๋
+// $pushID = 'U826ec160cae46b8fc9f06fe676c2510f'; // หวาน
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
