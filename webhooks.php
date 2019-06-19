@@ -19,7 +19,8 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 
 			// Get text sent
-			$text = $event['source']['userId'];
+			// $text = $event['source']['userId']; //  id ของเป้าหมาย
+			$text = "";
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
@@ -44,14 +45,19 @@ if (!is_null($events['events'])) {
 				$text = "เหานั่นแหละบ้า";
 			} else if (preg_match("/หวาน/i", $userMessage)) {
 				$text = "คนขี้เกียจตื่น ใช่หรือไม่";
+			} else if ("ใช่" == $userMessage) {
+				$text = "คักแหน่";
+			} else if ("ไม่ใช่" == $userMessage) {
+				$text = "อย่ามาตั๋ว";
+			} else if (preg_match("/กิน/i", $userMessage)) {
+				$text = "หิวแล้วติ";
+			} else if (preg_match("/หิว/i", $userMessage)) {
+				$text = "กินไรดี";
+			} else if (preg_match("/ไม่รู้/i", $userMessage) || preg_match("/บ่รู้/i", $userMessage)) {
+				$text = "ก๋วยเตี๋ยว";
+			} else {
+				$text = "เบิดคำสิเว้า";
 			} 
-			// else {
-			// 	$text = "เบิดคำสิเว้า";
-			// } 
-
-			
-
-
 			// if (strpos($userMessage, 'สวัสดี') || $userMessage == 'สวัสดี') {
 			// 	$text = "สวัสดีครับมีอะไรให้ช่วยมั๊ยครับ";
 			// } else if (strpos($userMessage, 'รัก') == true) {
