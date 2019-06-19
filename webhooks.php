@@ -10,7 +10,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-echo "hunter";
+
 if (!is_null($events['events'])) {
 
 	// Loop through each event
@@ -32,6 +32,8 @@ if (!is_null($events['events'])) {
 
 			if(preg_match("/สวัสดี/i", $userMessage)) {
 				$text = "สวัสดีครับมีอะไรให้ช่วยมั๊ยครับ";
+			} else if (preg_match("/มี/i", $userMessage)) {
+				$text = "มีอะไร";
 			} else if (preg_match("/รัก/i", $userMessage)) {
 				$text = "ความรักเป็นสิ่งสวยงาม";
 			} else if (preg_match("/นอน/i", $userMessage)) {
@@ -42,7 +44,12 @@ if (!is_null($events['events'])) {
 				$text = "เหานั่นแหละบ้า";
 			} else {
 				$text = "เบิดคำสิเว้า";
-			}
+			} 
+
+			if (preg_match("/หวาน/i", $userMessage)) {
+				$text = "คนขี้เกียจตื่น ใช่หรือไม่";
+			} 
+
 
 			// if (strpos($userMessage, 'สวัสดี') || $userMessage == 'สวัสดี') {
 			// 	$text = "สวัสดีครับมีอะไรให้ช่วยมั๊ยครับ";
