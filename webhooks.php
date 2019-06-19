@@ -42,13 +42,14 @@ if (!is_null($events['events'])) {
 				$text = "เสาร์ อาทิตย์นี้กะนอนเด้อ ตื่นมาเทื่อเดียววันจันทร์";
 			} else if (preg_match("/บ้า/i", $userMessage)) {
 				$text = "เหานั่นแหละบ้า";
-			} else {
-				$text = "เบิดคำสิเว้า";
-			} 
-
-			if (preg_match("/หวาน/i", $userMessage)) {
+			} else if (preg_match("/หวาน/i", $userMessage)) {
 				$text = "คนขี้เกียจตื่น ใช่หรือไม่";
 			} 
+			// else {
+			// 	$text = "เบิดคำสิเว้า";
+			// } 
+
+			
 
 
 			// if (strpos($userMessage, 'สวัสดี') || $userMessage == 'สวัสดี') {
